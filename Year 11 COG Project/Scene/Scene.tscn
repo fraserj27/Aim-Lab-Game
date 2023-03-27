@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scene/Scene.dae" type="PackedScene" id=1]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+
+[node name="Scene" instance=ExtResource( 1 )]
+
+[node name="Floor" parent="." index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0212402, 0.103821, -0.128437 )
+
+[node name="Player" parent="." index="2" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49364, 3.53418, 2.0296 )
+
+[node name="Enemy" parent="." index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9803, 5.59065, -37.9676 )
+
+[node name="Enemy2" parent="." index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.1359, -7.37627, -6.5359 )
+
+[node name="Enemy3" parent="." index="6" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3.62109, -3.26255 )
+
+[node name="Enemy4" parent="." index="7" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2001, 3.58208, 11.6035 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="." index="8"]
+transform = Transform( 0.766044, -0.413176, -0.492404, 0, -0.766044, 0.642788, -0.642788, -0.492404, -0.586824, -0.0330162, 25.5264, 0.12467 )
+light_energy = 0.5
+shadow_enabled = true
